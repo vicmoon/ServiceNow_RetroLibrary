@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil) {
+    $scope.title = '';
+    $scope.author = '';
+    $scope.results = [];
+    $scope.selectedBook = null;
+    $scope.modalVisible = false;
+    $scope.loading = false;
+
+    $scope.search = function() {
+        if (!$scope.title && !$scope.author) return;
+        $scope.loading = true;
+
+        $scope.server.get({
+            title: $scope.title || '',
+            author: $scope.author || ''
+        }).then(function(response) {
+            $scope.results = response.data.books || [];
+            $scope.loading = false;
+        });
+    };
+
+    $scope.showModal = function(book) {
+        $scope.selectedBook = book;
+        $scope.modalVisible = true;
+    };
+
+    $scope.closeModal = function() {
+        $scope.modalVisible = false;
+    };
+	
+$scope.favorite = function(book, $event) {
+    $event.stopPropagation();
+
+    $scope.server.get({
+        action: 'addFavorite',
+        book: book
+    }).then(function(response) {
+        if (response.data && response.data.status === 'success') {
+            spUtil.addInfoMessage('Book added to favorites!');
+        } else {
+             spUtil.addErrorMessage('Failed to add book to favorites.');
+            console.error(response.data);
+        }
+    });
+};
+
+
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.buttons{
+  display:flex;
+  padding:10px;
+  gap:10px;
+}
+
+.panel-body .row {
+  column-width: 250px;
+  column-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.book_cards {
+  /* keeps the bean from splitting across columns */
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.book_cards .thumbnail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Retro notification banner */
+sp-notify.retro-notify {
+  display: block;                 /* make it box‐like */
+  background-color: #f9f3e7;      
+  border: 3px solid #c49e7d;      
+  border-radius: 8px;             
+  box-shadow: 4px 4px 0 0 #c49e7d; 
+  padding: 0.75rem 1rem;          
+  font-family: 'Courier New', monospace;
+  color: #6b4226;
+  margin-bottom: 1rem;
+}
+
+/* Upgrade the Bootstrap panel to retro */
+.panel.panel-default.retro-panel {
+  background-color: #f9f3e7;
+  border: 3px solid #c49e7d;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 0 #c49e7d;
+  overflow: hidden;
+}
+.panel.panel-default.retro-panel .panel-heading {
+  background-color: #c49e7d;
+  color: #f9f3e7;
+  font-family: 'Courier New', monospace;
+  border-bottom: 2px solid #6b4226;
+}
+.panel.panel-default.retro-panel .panel-body {
+  padding: 1rem;
+}
+
+/* Apply your retro card style to search results */
+.book_cards .thumbnail.retro {
+  background-color: #f9f3e7;
+  border: 3px solid #c49e7d;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 0 #c49e7d;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  transition: transform 0.2s ease;
+}
+.book_cards .thumbnail.retro img {
+  border: 2px solid #c49e7d;
+  border-radius: 4px;
+  filter: sepia(0.3) contrast(1.1);
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+.book_cards .thumbnail.retro .caption {
+  color: #6b4226;
+  text-shadow: 1px 1px 0 #f9f3e7;
+}
+.book_cards .thumbnail.retro .caption h5 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+}
+.book_cards .thumbnail.retro .caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.book_cards .thumbnail.retro:hover {
+  transform: translateY(-4px);
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>open_library</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>OpenLibrarySearch</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    data.books = [];
+
+    // Search
+    if (input && (input.title || input.author)) {
+        try {
+            var helper = new x_1032697_openli_0.GoogleBooksUtils(); // or OpenLibraryUtils
+            data.books = helper.searchBooks(input.title, input.author);
+        } catch (e) {
+            data.error = 'Error: ' + e.message;
+        }
+    }
+
+    // Favorite
+    if (input && input.action === 'addFavorite' && input.book) {
+        try {
+            var favUtil = new FavoriteBooksUtils();
+            favUtil.addFavorite(input.book);
+					gs.info('Adding book to favorites: ' + JSON.stringify(input.book));
+            data.status = 'success';
+        } catch (e) {
+            data.status = 'error';
+            data.error = e.message;
+        }
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 13:02:01</sys_created_on>
+        <sys_id>dda9f63283e1ae10870010c5eeaad355</sys_id>
+        <sys_mod_count>73</sys_mod_count>
+        <sys_name>OpenLibrarySearch</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sp_widget_dda9f63283e1ae10870010c5eeaad355</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-21 18:52:06</sys_updated_on>
+        <template><![CDATA[ <sp-notify class="retro-notify" ></sp-notify>
+
+<div class="panel panel-default retro-panel">
+
+  <div class="panel-heading">
+    <h4>Book Search</h4>
+  </div>
+  <div class="panel-body">
+    <!-- Search form -->
+    <form class="form-inline m-b-md" ng-submit="search()">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          ng-model="title"
+          placeholder="Title"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          ng-model="author"
+          placeholder="Author"
+        />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Search</button>
+        <button
+          type="button"
+          class="btn btn-default"
+          ng-click="title=''; author=''; results=[]"
+        >
+          <i class="fa fa-times"></i> Clear
+        </button>
+      </div>
+    </form>
+
+    <!-- Results grid -->
+    <div class="row" ng-if="results.length > 0">
+      <div
+        class="book_cards"
+        ng-repeat="book in results"
+      >
+        <div
+          class="thumbnail text-center retro"
+          ng-click="showModal(book)"
+          style="cursor: pointer"
+        >
+          <img
+            ng-if="book.cover_id"
+            ng-src="{{book.cover_id}}"
+            class="img-responsive center-block"
+          />
+          <div class="caption">
+            <h5>{{book.title}}</h5>
+            <p><strong>{{book.author}}</strong></p>
+            <button
+              class="btn btn-sm btn-warning"
+              ng-click="favorite(book, $event)"
+            >
+              <i class="fa fa-star"></i> Favorite
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div ng-if="loading" class="text-center">
+      <i class="fa fa-spinner fa-spin fa-2x"></i>
+      <p>Searching GoogleBooks...</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  ng-if="modalVisible"
+  class="modal fade in"
+  style="display: block; background-color: rgba(0, 0, 0, 0.5)"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="closeModal()">
+          &times;
+        </button>
+        <h4 class="modal-title">{{selectedBook.title}}</h4>
+      </div>
+
+      <div class="modal-body text-center">
+        <img
+          ng-if="selectedBook.cover_id"
+          ng-src="{{book.cover_id}}"
+          class="img-responsive center-block"
+          style="max-height: 300px"
+        />
+        <p><strong>Author:</strong> {{selectedBook.author}}</p>
+        <p><strong>First Published:</strong> {{selectedBook.year}}</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-default" ng-click="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="DELETE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>x_1032697_openli_0.GitHub</id>
+        <is_internal>false</is_internal>
+        <multiple_connections>false</multiple_connections>
+        <name>GitHub</name>
+        <parent/>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-22 08:28:31</sys_created_on>
+        <sys_id>7feec06b83256250870010c5eeaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1032697_openli_0.GitHub</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sys_alias_7feec06b83256250870010c5eeaad37d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-22 08:28:31</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</application>
+        <file_path/>
+        <instance_id>5704da2f1b6af5949377eb9b2d4bcb6b</instance_id>
+        <instance_name>dev221523</instance_name>
+        <name>sys_alias_7feec06b83256250870010c5eeaad37d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias"><sys_alias action="INSERT_OR_UPDATE"><configuration_template/><connection_type>http_connection</connection_type><id>x_1032697_openli_0.GitHub</id><is_internal>false</is_internal><multiple_connections>false</multiple_connections><name>GitHub</name><parent/><retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy><sys_class_name>sys_alias</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-22 08:28:31</sys_created_on><sys_id>7feec06b83256250870010c5eeaad37d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1032697_openli_0.GitHub</sys_name><sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package><sys_policy/><sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope><sys_update_name>sys_alias_7feec06b83256250870010c5eeaad37d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-05-22 08:28:31</sys_updated_on><type>connection</type></sys_alias></record_update>]]></payload>
+        <payload_hash>-1239250788</payload_hash>
+        <record_name>x_1032697_openli_0.GitHub</record_name>
+        <reverted_from/>
+        <source>f9143e3a83a1ae10870010c5eeaad344</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-22 08:28:31</sys_created_on>
+        <sys_id>510f446b83256250870010c5eeaad331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196f71bba040000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-22 08:28:31</sys_updated_on>
+        <type>Connection &amp; Credential Aliases</type>
+        <update_guid>550f446ba82562500e282af89d60b230</update_guid>
+        <update_guid_history>550f446ba82562500e282af89d60b230:-1239250788</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-22 08:28:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_alias">sys_alias</sys_db_object>
+        <sys_id>33aa67e2b6a240769b5d464386f2f864</sys_id>
+        <sys_metadata>7feec06b83256250870010c5eeaad37d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1032697_openli_0.GitHub</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_scope_delete display_value="">02b169ce7e65453e800f5da7191b21c9</sys_scope_delete>
+        <sys_update_name>sys_alias_7feec06b83256250870010c5eeaad37d</sys_update_name>
+        <sys_update_version display_value="sys_alias_7feec06b83256250870010c5eeaad37d">510f446b83256250870010c5eeaad331</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-22 08:28:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

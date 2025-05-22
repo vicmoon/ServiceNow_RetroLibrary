@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script/>
+        <controller_as>c</controller_as>
+        <css> .portal-icon {
+   
+  font-size: 2.5rem;             /* bump up the icon size */
+  color: #6b4226;                /* same deep brown */
+  text-decoration: none;         /* remove underline */
+  margin-right: 1rem;            /* space before the nav */
+  display: flex;
+  align-items: center;
+}
+
+
+
+.retro-header {
+      /* retro styling */
+      background-color: #f9f3e7;
+      border: 3px solid #c49e7d;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 0 #c49e7d;
+      padding: 1.5rem;
+      font-family: 'Courier New', monospace;
+
+     /* flex setup */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* top row: title and nav */
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .portal-title {
+      margin: 0;
+      color: #6b4226;
+      font-size: 1.75rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-menu a {
+      color: #6b4226;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border: 2px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .nav-menu a:hover {
+      background-color: #c49e7d;
+      color: #f9f3e7;
+      border-color: #6b4226;
+    }
+
+    /* quote sits under the header-top, but still inside header */
+    .quote {
+      margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 4px solid #c49e7d;
+      font-style: italic;
+      color: #6b4226;
+      /* transparent background so it blends with header */
+      background: transparent;
+    }</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>header_library</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Header_library</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 13:54:17</sys_created_on>
+        <sys_id>2256c3728325ae10870010c5eeaad396</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>Header_library</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sp_widget_2256c3728325ae10870010c5eeaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-22 07:23:19</sys_updated_on>
+        <template><![CDATA[<header class="retro-header d-flex align-items-center">
+     <a href="?id=library_home" class="portal-icon" aria-label="Retro Library">
+    <i class="fa fa-book"></i>
+  </a>
+
+  <nav class="nav-menu nav-menu ms-auto">
+    <a href="?id=library_home">Home</a>
+    <a href="?id=book_search">Search </a>
+  </nav>
+</header>
+
+]]></template>
+    </sp_widget>
+</record_update>

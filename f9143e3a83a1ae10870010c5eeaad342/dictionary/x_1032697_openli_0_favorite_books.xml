@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="59c90f0b8369ee10870010c5eeaad3a4" label="Favorite Books" max_length="40" name="x_1032697_openli_0_favorite_books" type="collection">
+        <element label="Title" max_length="40" name="title" type="string"/>
+        <element label="Cover URL" max_length="400" name="cover_url" type="string"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="Year" max_length="40" name="year" type="string"/>
+        <element label="Volume ID" max_length="40" name="volume_id" type="string"/>
+        <element label="Author" max_length="40" name="author" type="string"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

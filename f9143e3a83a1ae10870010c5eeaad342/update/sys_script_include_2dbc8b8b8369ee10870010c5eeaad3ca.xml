@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1032697_openli_0.FavoriteBooksUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FavoriteBooksUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FavoriteBooksUtils = Class.create();
+FavoriteBooksUtils.prototype = {
+    initialize: function() {},
+
+    addFavorite: function(book) {
+        var gr = new GlideRecord('x_1032697_openli_0_favorite_books');
+        gr.initialize();
+        gr.user = gs.getUserID();
+        gr.title = book.title;
+        gr.author = book.author;
+        gr.year = book.year;
+        gr.cover_url = book.cover_id.replace('http://', 'https://') || '';
+        gr.volume_id = book.volume_id || '';
+        gr.insert();
+        gs.info("Added favorite: " + book.title + " by " + book.author);
+    },
+
+    getFavorites: function() {
+        var results = [];
+        var gr = new GlideRecord('x_1032697_openli_0_favorite_books');
+        gr.addQuery('user', gs.getUserID());
+        gr.orderBy('title');
+        gr.query();
+        while (gr.next()) {
+            results.push({
+                title: gr.getValue('title'),
+                author: gr.getValue('author'),
+                year: gr.getValue('year'),
+                cover_url: gr.getValue('cover_url'),
+                volume_id: gr.getValue('volume_id')
+            });
+        }
+        return results;
+    },
+
+    type: 'FavoriteBooksUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-21 09:00:59</sys_created_on>
+        <sys_id>2dbc8b8b8369ee10870010c5eeaad3ca</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>FavoriteBooksUtils</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sys_script_include_2dbc8b8b8369ee10870010c5eeaad3ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-21 14:17:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

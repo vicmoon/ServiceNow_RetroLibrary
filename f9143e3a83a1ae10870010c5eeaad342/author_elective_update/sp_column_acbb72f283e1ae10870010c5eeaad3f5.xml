@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">e0bb72f283e1ae10870010c5eeaad3f3</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 13:07:31</sys_created_on>
+        <sys_id>acbb72f283e1ae10870010c5eeaad3f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sp_column_acbb72f283e1ae10870010c5eeaad3f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 13:07:31</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</application>
+        <file_path/>
+        <instance_id>5704da2f1b6af5949377eb9b2d4bcb6b</instance_id>
+        <instance_name>dev221523</instance_name>
+        <name>sp_column_acbb72f283e1ae10870010c5eeaad3f5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><semantic_tag/><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">e0bb72f283e1ae10870010c5eeaad3f3</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-20 13:07:31</sys_created_on><sys_id>acbb72f283e1ae10870010c5eeaad3f5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package><sys_policy/><sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope><sys_update_name>sp_column_acbb72f283e1ae10870010c5eeaad3f5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-05-20 13:07:31</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-640135781</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>f9143e3a83a1ae10870010c5eeaad344</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 13:07:31</sys_created_on>
+        <sys_id>20bb72f283e1ae10870010c5eeaad3f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196edce70c60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 13:07:31</sys_updated_on>
+        <type>Column</type>
+        <update_guid>24bb72f2a2e1ae10cb6dadd0425ff2f7</update_guid>
+        <update_guid_history>24bb72f2a2e1ae10cb6dadd0425ff2f7:-640135781</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">91f40bfe83e1ae10870010c5eeaad318</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 13:47:58</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>1e82c4346a9648168613f3780294eb89</sys_id>
+        <sys_metadata>acbb72f283e1ae10870010c5eeaad3f5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_scope_delete display_value="">02b169ce7e65453e800f5da7191b21c9</sys_scope_delete>
+        <sys_update_name>sp_column_acbb72f283e1ae10870010c5eeaad3f5</sys_update_name>
+        <sys_update_version display_value="sp_column_acbb72f283e1ae10870010c5eeaad3f5">20bb72f283e1ae10870010c5eeaad3f8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 13:47:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

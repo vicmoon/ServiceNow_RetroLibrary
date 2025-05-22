@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b49d33fa8329ae10870010c5eeaad318</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 17:55:25</sys_created_on>
+        <sys_id>399d3f3a8329ae10870010c5eeaad37a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sp_instance_399d3f3a8329ae10870010c5eeaad37a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 17:57:53</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<h3 style=\"text-align: center;\"><span style=\"color: rgb(24, 24, 24); font-family: Merriweather, Georgia, serif; font-size: 14px; text-align: left; white-space: normal; background-color: rgb(255, 255, 255); float: none; display: inline;\">A<em> site</em> without books is like a body without a soul.</span></h3>",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=399d3f3a8329ae10870010c5eeaad37a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</application>
+        <file_path/>
+        <instance_id>5704da2f1b6af5949377eb9b2d4bcb6b</instance_id>
+        <instance_name>dev221523</instance_name>
+        <name>sp_instance_399d3f3a8329ae10870010c5eeaad37a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;b49d33fa8329ae10870010c5eeaad318&lt;/sp_column&gt;&lt;sp_widget display_value="HTML"&gt;8679ef89cb21120000f8d856634c9c4f&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-20 17:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;399d3f3a8329ae10870010c5eeaad37a&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0"&gt;f9143e3a83a1ae10870010c5eeaad342&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="OpenLibrarySearch"&gt;f9143e3a83a1ae10870010c5eeaad342&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_399d3f3a8329ae10870010c5eeaad37a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-20 17:57:53&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"html": {
+		"value": "&lt;h3 style=\"text-align: center;\"&gt;&lt;span style=\"color: rgb(24, 24, 24); font-family: Merriweather, Georgia, serif; font-size: 14px; text-align: left; white-space: normal; background-color: rgb(255, 255, 255); float: none; display: inline;\"&gt;A&lt;em&gt; site&lt;/em&gt; without books is like a body without a soul.&lt;/span&gt;&lt;/h3&gt;",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=399d3f3a8329ae10870010c5eeaad37a"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1510883924</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>f9143e3a83a1ae10870010c5eeaad344</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 17:57:53</sys_created_on>
+        <sys_id>062e7ffa8329ae10870010c5eeaad312</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196eed8468b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 17:57:53</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>ca2e7ffa0a29ae10416ce1f264a0c211</update_guid>
+        <update_guid_history>ca2e7ffa0a29ae10416ce1f264a0c211:1510883924,331eb33a0029ae109f65cc92ad206f44:-33012645,8abd77ba9d29ae10c0db65a29f1e2448:-1757727585,c29d33fa5729ae1067a36c296ee5c17c:1650307781</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">e13f373e8329ae10870010c5eeaad323</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 18:02:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>2d50ae3a0e964a3696123fd4de54a681</sys_id>
+        <sys_metadata>399d3f3a8329ae10870010c5eeaad37a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_scope_delete display_value="">02b169ce7e65453e800f5da7191b21c9</sys_scope_delete>
+        <sys_update_name>sp_instance_399d3f3a8329ae10870010c5eeaad37a</sys_update_name>
+        <sys_update_version display_value="sp_instance_399d3f3a8329ae10870010c5eeaad37a">062e7ffa8329ae10870010c5eeaad312</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 18:02:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

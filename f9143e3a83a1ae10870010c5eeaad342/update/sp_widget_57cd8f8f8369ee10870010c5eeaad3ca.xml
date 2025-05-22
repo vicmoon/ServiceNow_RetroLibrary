@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.all_books {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+
+/* apply to your Bootstrap thumbnail wrapper */
+.thumbnail.retro {
+  background-color: #f9f3e7;            /* warm ivory */
+  border: 3px solid #c49e7d;            /* muted cocoa */
+  border-radius: 8px;                   /* rounded, but not too round */
+  box-shadow: 4px 4px 0 0 #c49e7d;       /* offset shadow for that old-print look */
+  padding: 1rem;
+  font-family: 'Courier New', monospace;/* typewriter vibes */
+  transition: transform 0.2s ease;       /* subtle hover lift */
+}
+
+/* slightly inset image frame with a sepia-ish tint */
+.thumbnail.retro img {
+  border: 2px solid #c49e7d;
+  border-radius: 4px;
+  filter: sepia(0.3) contrast(1.1);
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/* caption tweaks */
+.thumbnail.retro .caption {
+  color: #6b4226;        /* deep brown text */
+  text-shadow: 1px 1px 0 #f9f3e7; /* subtle emboss */
+}
+.thumbnail.retro .caption h5 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+}
+.thumbnail.retro .caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* hover effect to “lift” the card */
+.thumbnail.retro:hover {
+  transform: translateY(-4px);
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>favorite_books</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>FavoriteBooks</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	var utils = new FavoriteBooksUtils();
+	data.books = utils.getFavorites();
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-21 09:05:32</sys_created_on>
+        <sys_id>57cd8f8f8369ee10870010c5eeaad3ca</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>FavoriteBooks</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>sp_widget_57cd8f8f8369ee10870010c5eeaad3ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-21 17:58:32</sys_updated_on>
+        <template><![CDATA[<div class="row" ng-if="data.books.length > 0">
+  <div  class="col-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="book in data.books">
+    <div class="thumbnail text-center retro">
+      <img ng-src="{{book.cover_url}}" alt="{{book.title}}" class="img-responsive" />
+      <div class="caption">
+        <h5>{{book.title}}</h5>
+        <p><strong>{{book.author}}</strong> ({{book.year}})</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-if="data.books.length === 0" class="text-center">
+  <p>You haven’t favorited any books yet.</p>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

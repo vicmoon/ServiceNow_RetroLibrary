@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_css_include">
+    <m2m_sp_theme_css_include action="INSERT_OR_UPDATE">
+        <order/>
+        <sp_css_include display_value="url_stylesheet">e8c3f77e83e5ae10870010c5eeaad378</sp_css_include>
+        <sp_theme display_value="Retro Portal Theme">8733c77e83e1ae10870010c5eeaad382</sp_theme>
+        <sys_class_name>m2m_sp_theme_css_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-20 17:13:03</sys_created_on>
+        <sys_id>99e37b3e83e5ae10870010c5eeaad3d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>url_stylesheet.Fun Portal Theme</sys_name>
+        <sys_package display_value="OpenLibrarySearch" source="x_1032697_openli_0">f9143e3a83a1ae10870010c5eeaad342</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="OpenLibrarySearch">f9143e3a83a1ae10870010c5eeaad342</sys_scope>
+        <sys_update_name>m2m_sp_theme_css_include_99e37b3e83e5ae10870010c5eeaad3d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-20 17:13:03</sys_updated_on>
+    </m2m_sp_theme_css_include>
+</record_update>
